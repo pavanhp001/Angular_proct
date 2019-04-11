@@ -1,0 +1,86 @@
+<div  *ngIf="courses.length > 0">
+  <p>List of courses ---</p>
+</div>
+<div *ngIf="courses.length == 0"> 
+ <p>No courses Available.</p>
+</div>
+
+<!-- 
+  #coursesList is a template variable.
+  <div  *ngIf="courses.length > 0; else noCourses">
+  <p>List of courses...</p>
+</div>
+<ng-template #noCourses> 
+ <p>No courses Available.</p>
+</ng-template> -->
+
+<!-- <div  *ngIf="courses.length > 0; then coursesList else noCourses"></div>
+<ng-template #coursesList> 
+  <p>List of courses...</p>
+ </ng-template>
+<ng-template #noCourses> 
+ <p>No courses Available.</p>
+</ng-template> -->
+
+<!-- In case for hidden attr we acn ableto see the both div in browse. -->
+<div  [hidden]="courses.length == 0">
+  <p>List of courses</p>
+</div>
+<div [hidden]="courses.length > 0"> 
+ <p>No courses Available.</p>
+</div>
+
+<!-- ul.nav.nav-pills -->
+<h2>ngSwitch Example :</h2>
+
+<ul class="nav nav-pills">
+<li [class.active]="viewMode=='map'"><a (click)="viewMode='map'" >Map View</a></li>
+<li [class.active]="viewMode=='list'"><a (click)="viewMode='list'" >List View</a></li>
+</ul>
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map view contant</div>
+  <div *ngSwitchCase="'list'">List view contant</div>
+  <div *ngSwitchDefault>Otherwise</div>
+</div>
+
+<!-- ngFor -->
+<!-- <p>ngFor Example : </p>
+
+<ul>
+  <li *ngFor="let course of courses; index as i">
+    {{i}} - {{course.name}}
+  </li>
+</ul> -->
+
+<h2>ngFor Example : </h2>
+<button (click)="onAdd()">Add</button>
+<ul>
+  <li *ngFor="let course of courses">
+    {{course.name}}
+    <button (click)="onRemove(course)">Remove</button>
+    <button (click)="onChange(course)">Update</button>
+  </li>
+</ul>
+
+<h2>ngStyle Example: </h2>
+<button
+  [ngStyle]="{
+ 'backgroudColor': canSave ? 'blue': 'gray',
+ 'color': canSave ? 'red': 'block'
+}"
+ >ngStyle </button>
+
+ <h2>ngClass Example: </h2>
+<button
+  [ngStyle]="{
+ 'backgroudColor': canSave ? 'blue': 'gray',
+ 'color': canSave ? 'red': 'block'
+}"
+ >ngStyle </button>
+
+ <h2>Safe Traversal Operations </h2>
+ <span>{{ subject.title }}</span>
+
+
+ <h2>Custom Directive</h2>
+ <input type="text" [appInputFormat]="'upperCase'">

@@ -1,0 +1,16 @@
+<div class="panel panel-primary" style="margin-top: 20px;">
+    <div class="panel-heading">Parent Component</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label for="countryName">Selected Country: </label>
+            <span>{{ selectedCountry }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-success">
+    <div class="panel-heading">Child Component</div>
+    <div class="panel-body">
+        <app-child [inputCountries]="listOfCountry" (outputSelectedCountry)="showSelectedCountry($event)"></app-child>
+    </div>
+</div>
