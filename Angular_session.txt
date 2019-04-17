@@ -1,0 +1,565 @@
+Ground Rules :
+	1. Attendance
+		- Appreciated if you could login to the session using Wipro MailId
+		- Minimum 70% of attendance in training
+		- Complete and Submit the assignments in TopGear on or before 24th April 2019
+		- Must complete the assessment [ 20 Multiple choice questions ] https://newitms.wipro.com on or before 24th April'19.
+	2. E-learning
+		- https://newitms.wipro.com 
+			       |-> Learning Initative -> Technology -> Java -> Angular (Ver 4,5,6) [ Cur - 2937 ]
+		- Currated Contents https://newitms.wipro.com
+					      |-> Learning Initative -> Future Skills
+		- WebEx Recording
+	3. Assignments
+		- https://topgear-app.wipro.com
+				|-> Communities -> UI Development -> Angular
+								  |
+								  V
+							      Training Projects
+				                    Angular 4 Assignments L2 <-|
+		- Submission : https://topgear-training-gitlab.wipro.com/ (or) 
+			      https://topgear-app.wipro.com/sites/default/files/steps_to_execute_topgear_training_case_study_projects_v1_2_3.pdf
+	4. Training Schedule
+		- 15th to 19th April 2019 excluding 18th April 2019.
+		- 2.30 PM to 5.30 PM
+		- Logical break either for 20 or 25 minutes between 3.30 PM / 3.45 PM
+		- Interactive session [ Acknowledge me and Concerns/Challenges during the training ]
+Agenda :-
+	a. Overview of Web Applications, JavaScript  and JavaScript Framework
+	b. Introduction to Angular
+	c. Features of Angular
+	d. Differences between Angular 1 Vs Angular 2 Vs Angular 4 
+	e. Configuring and Installing Angular CLI [ Command Line Interface ]
+	f. Angular Project Structure
+	g. Order of Execution 
+	h. Binding  & Different Types of Binding
+	i. Modules 
+	j. Components 
+	k. Directives & Types
+	l. Services 
+	m. Pipes
+	n. Forms and Validation
+	o. Routing 
+	p. Overview of Materials 
+
+Pre-requsitie
+	- HTML , CSS and Javascript
+	- Added Advantage when you know BootStrap and Typescript
+
+WebApplication
+	- Otherwise known as WebSite
+			             |-> Group of files saved and linked together on the WebServer
+	Tools Requires to deploy		|-> Page
+		a. Web Browser
+			- An application used to find / hear / view some informations on the web
+		b. Web Server		
+			- Program used to serve the requested HTML Page
+		c. HTTP [ Hypertext Transfer/Transmission Protocol ]
+			- Communication layer/Interface between Web Browser and Web Server
+			c.1 HTTPRequest
+			c.2 HTTPResponse
+	Objective
+		- Browser and OS Independent
+Page
+	- Equivalent to programs in any Programming language
+	- Contains Tags [ Equivalent to instructions / Keywords ]
+		     |-> Derived from Markup Language
+				              |-> Used to format the text and create an UI [ User Interface ]
+					All the markup languages are derived from SGML [ Standard Generalized Markup Language ]
+					  |-> HTML , XML , XAML , ...
+		       Types
+		             a. Empty
+			        - Without a closing tag associated to it
+				Eg.:	<br> , <p> , ...
+		             b. Container	
+			        - With a closing tag associated to it
+				Eg.:	<html> ... </html> , <body> ... </body>, <head> ... </head>
+	Types 
+		a. Static
+			- Will not have any user interacting during the run time
+			- Using Markup language
+		b. Dynamic	      	
+			- Will have some set of user interaction during the run time
+			- Markup Language + Scripting Language
+					            |-> Language which will be interpreted by another programming language
+											|-> Either WebBrowser or WebServer
+						Eg.: JavaScript , VBScript, ASP , ASP.Net , JSP , JSF , ...
+			Types
+				b.1 Client Side
+					- Will be deployed by the Web Browser
+					- To avoid Network Traffic / Congestion
+					- Form Validation	        |-> onClick, onBlur, onKeyUp, onLoad ...
+						|-> Control Event Procedures
+			Textbox, Button, Label , CheckBox<-|		   |-> Subroutine / Sub-program created using Scripting Language
+			RadioButton, Drop Down List, ListBox							|-> Either JavaScript / VB Script
+				b.2 Server Side
+					- Used to either import / export the data 
+					- We use a srictpting language either ASP , ASP.Net, JSP , ...		
+JavaScript
+	- Derived from Java
+	- Used to create a dynamic web-page
+	- Browser and OS independent
+	- Using a <script> enclosed within the page
+		     |-> Either on the <head> or <body> 
+	 	     page_init() Event <-|	      |-> page_load() event
+	To link various external libraries |	      |     Used to provide the business logic				      
+		           Min.: 0 and Max.: 'n'	        
+	Representation
+		a. Inline
+			- Enclosing the script functionality within the HTML tags
+			Eg.:
+				<html>
+				         <body onLoad="alert('When will be the Break ?' )">
+				         </body>
+				</html>
+		b. Embedded
+			- Enclosing the script functionality within the <script>
+			Eg.:
+				<html>
+				        <body onLoad= "demoFunction()">
+					<script>
+					         function demoFunction(){
+						alert(' Boring Training ');
+					          }
+					</script>
+				         </body>
+				</html>
+		c. External
+			- Used to seprate the presentation logic and application logic sepratley
+			- Extension of the file can be either .js or .vbs
+			Eg.:
+				<html>
+				         <body onLoad = "demoFunction()">
+				                  <script src="d:\\Balaji\\Demo Programs\\JavaScript\\Demo.js">
+				                  </script>
+				          </body>
+				</html>
+	Modes of Execution
+		a. Immediate	: Script functionality will be deployed implictly [ page_init() / page_load() ] either by the WebBrowser / Server
+		b. Deffered	: Script functionality as to be deployed explicitly by the end user
+	Performance Challenges
+		a. Lack of  Design Pattern 
+		b. Changes the complete state of the page
+		c. Lack of Dependency Injection
+Javascript Framework
+	          |-> Building Blocks
+	- Google 
+	- To overcome the performance challenges in Scripting languages
+	- Angular 
+
+MEAN 	: Mongo DB Express JS Angular Node JS Framework
+
+Angular
+	- Used to create a client side dynamic web page using Design pattern
+	- Devloped by Google
+	- Extension of ECMA Script
+
+	Objective
+	           a. Design Pattern	: Modularity , Reusability and Userfriendliness
+		  |-> MVW
+		                 |-> Either Controller or Presenter or ViewModel
+	          b. Single Page Application [ SPA ]
+	          c. Two way databinding
+	          d. Dependency Injection
+	
+	Alternatives
+		a. React JS
+		b. VUE JS
+
+	Versions 
+		a. Angular 1 / Angular JS
+			- Model View Controller Architecture
+			- Uses JavaScript Extensively
+			- Depends on various third party tools 
+		b. Angular 2
+			- Component Service Architecture
+			- Uses Typescript 2.1
+			- Animations were part of '@angular/core' package
+			- Conflicts between HTML5 tags and Angular directives
+			- Third party tools to make our UI more responsive and user friendly
+				         |-> BootStrap , Hammer JS , ...
+		c. Angular 4
+			- Component Service Architecture
+			- Uses Typescript 2.2 [ Light weight application ]
+Next Generation JavaScript, Uses ECMA 6/7 <-  |		|-> Animations are part of @angular/animations			
+			- Materials [ Components [10] created by Google ]
+			- Enchanced the Structural Directives 	        |-> CDK (Component Devlopment Kit)
+			- Differentiated between HTML 5 tags and Angular Directives
+			- HTTP get parameters are simplified 
+						|-> Readable / Manageable / Userfriendly
+		d. Angular 5
+			a)  Build Optimizer			:  This is a tool which was included in the CLI to help the developers in creating a smaller 
+			     bundle for the application.  Apart from decreasing the users’ bundle size, the feature also helps in increasing the boot speed of 
+			     the application for the users.
+			b)  Compiler Improvements		: To enhance faster rebuilds for production and AOT (Ahead of Time) builds, Angular 5 supports
+			     incremental compilation.
+			c)  New Router Lifecycle Events	:  This new feature was added to enable the developers in tracking the cycle of the router,
+	  		     starting from running guards to the completion of activation.
+			d)  HttpClient			: This feature has been recommended for all the application as HTTPClient was highly appreciated. 
+		  	     The framework developer is not suggesting anymore, to use the previous @angular/HTTP library.									  
+Installing and Configuring Angular CLI [ Command Line Interface ]
+	a. Node JS
+		- Provides a runtime enviroment to deploy JavaScript functionality outside the Browser.
+		- Download link  https://nodejs.org/en/
+		- Already installed with the older version
+					|-> To upgrade npm : npm install npm@latest -g
+		- To check whether node is installed and configured in our machine
+			        |-> node -v
+			              npm -v
+	b. GIT hub
+		- Download link https://git-scm.com/download/win
+	c. Install Angular CLI
+		- npm install -g @angular/cli
+
+		Note.: To configure proxy to download npm packages
+			a. npm config set proxy http://wipro%5C<ADID>:<Password>@<Proxy URL>:8080
+			b. npm config set https-proxy http://wipro%5C<ADID>:<Password>@<Proxy URL>:8080
+		- To identify whether Angular CLI has been installed or not
+			ng -v
+	d. Install IDE [ Integrated Devlopment Environment ]
+		|-> Webstom , Atom , Visual Studio Code , Visual Studio 2015/2018
+					|-> Download Link .: https://code.visualstudio.com/download
+Create an Angular Project
+	- At the command prompt 
+		ng new <Project Name>
+Module
+	- Used to define an angular Application
+	- Acts as a placeholder for container's
+				|-> Type Either  Component , Directive , Pipes , Service , ...
+	- Min.: "1" and  Max.:"n"
+
+Angular Project Structure
+	a. e2e		: 
+		- End to End testing folder
+		- Used by webtester
+		- Integeration testing to check whether the application works fine or there is any challenge
+	b. node_modules	:
+		- All the npm packages which are installed / required to deploy the application
+			|-> By default while creating an Angular Project
+	c. src		:
+		- Source [ Used to customize the web application ]
+		- Used to keep track of all the user defined files related to the project
+						        |-> Modules, Components, Services , Directive , Pipe , ...
+		c.1 app
+			- Has the information about our applciation
+			- By default it will have a module and a component asscoaited to it
+			 c.1.1 app.component.css
+			 c.1.2 app.component.html
+			 c.1.3 app.component.spec.ts
+			 c.1.4 app.component.ts	
+			 c.1.5 app.module.ts
+		c.2 assets
+			- Will have the information about all the static resources required for the application
+								|-> Image or Pictures , Audio , Video , Text , ...
+		c.3 environment
+			- Will keep track configuration inforamtion about the environments
+									|-> Platform , Processor , ...
+		c.4 favicon.ico
+			- Used to have the information about the icons that are need to be displayed on our webpage
+		c.5 index.html
+			- Acts as the home page for our web application
+		c.6 karma.conf.js
+			- Used for unit test case 
+		c.7 main.ts
+			- Entry point for our Angular Application
+		c.8 polyfills.ts
+			- Versioning information , Backward compatibility
+		c.9 styles.css
+			- Global casecading style sheet file to use the styles across all the pages within the application		
+	d. .editorconfig	: 
+		- Configuartion file used by the editor
+	e. .gitignore	:	
+		- Used to create a web repository and share it across other users while we clone it
+		- Indicates which files , folders of this particular project will not be used by the git repository
+	f.  angular.json
+		- Used to give the detailed information about the project
+				  |-> Name , CLI version , Dependecies, ...
+		- Configuration file provided by the angular CLI to configure the project
+	g. package.json
+		- Keeps track of all the npm package depenedecies
+	h. tsconfig.json
+		- Compiler options which are required compiling
+		- Hub settings for TypeScript Compiler, using these settings the typescript compiler will compile the typescript code to Javascript code
+	i. tslint.json
+		- Configuration file with rules to be considered while compiling
+		- Static Analyzer tool used by the type script compiler in order for Manage, Reuse and functionality of the type script code
+Order of Execution
+	a. main.ts
+		- Acts as an entry point for our application
+		- Placed inside the src folder on our project
+		- Used to identify the parent module of the application
+			     |-> platformBrowserDynamic().bootstrapModule(<Parent Module ClassName>);
+									       |
+									      V
+								import {<ClassName>} from './app/app.module'
+	b. app.module.ts
+		- Creates the modules
+		- Used to define an angular application 
+		- Indicates the parent container of the module
+		           |-> bootstrap 
+		- To make the class to extend the functionality of the module we use the Metatag / Declarator as @NgModule()
+												             |-> JSON object as a parameter
+												            Properties <-|														     
+						              declarations , imports, exports , entryComponents, bootstrap, <-|  
+										schemas, providers , id	
+							Mandatory Properties are
+								declarations , imports , providers & bootstrap												    |
+			
+			Eg.:
+				import {NgModule} from '@angular/core';
+				import {BrowserModule} from '@angular/platfrom-browser';
+				import {AppComponent } from './app.component';
+ 				@NgModule({
+				            declarations:[
+					AppComponent
+				           ],
+				           imports:[
+					BrowserModule
+				          ],
+				          providers:[
+				          ],
+				           bootstrap:[
+					AppComponent
+				           ]
+				})
+				export class AppModule{
+				}
+	c. app.component.ts
+			- Used to create a component
+			- Class name has to be preceeded by @Component() metatag / declarator
+								   |-> JSON object as an argument
+									     |
+									     V
+									a. selector
+									b. templateUrl / template
+									c. styleUrls / style
+Deploy the Angular Application
+	a. ng serve
+	b. ng serve - - host <IP Address> - - port <Port Number>
+	c. ng serve - - open
+
+	- Angular CLI uses a Automation Build tool named WebPack implicitly
+						        |-> Used to bundle all the files that are required to deploy the application
+						              To optimize the time taken to deploy the application
+Binding
+	- Used to map the model data to the view
+	Types
+		a. Data 
+			- Used to map the variables created inside the component class available in app.component.ts
+				  |-> {{ }}  [ Interpolation ]
+					
+		b. Property	: [ ]
+		c. Class
+		d. Event		: ()
+		e. Two way
+
+Userdefined components
+	- Angular CLI command ng g component <Component Name>
+	- By default for all the user defined components the parent component is class defined app.component.ts file	
+
+Traverse the data between the components
+	a. Parent to Child
+		Step 1 : On the child component , Include an interface named "Input" 
+					             |-> import {Component, Input} from '@angular/core';
+		Step 2: Create a variable with the Input declarator inside the child component class
+				@Input() <Variable Name>: <Data type>;
+		Step 3:  Open the parent component .html file and add the selector specified in the child component 
+				<child-component></child-component>
+		Step 4: Map the @Input() <Variable Name> as a property to the child component tag element
+				<child-component [<VariableName>] = "<Parent Component VariableName> "> </child-component>
+	b. Child to Parent	
+		 Step 1: On the child component , Include an interface named "Output"
+					            |-> import {Component,Output} from '@angular/core';
+		Step 2: Create an object for EventEmitter class available in '@angular/core' module
+				|-> @Output() objMessageEvent = new EventEmitter();		
+		Step 3: Create a variable on the child component .ts file
+				|-> message:string = 'Feeling Sleepy';
+		Step 4: Create a Button component to associate a event to it on child component .html file
+				<button (click) = "sendMessage()">ClickMe </button>
+		Step 3: Create an event on the child component and map it some DOM elements in child component .html file
+				sendMessage(){
+					this.objMessageEvent.emit(this.message);	
+		Step 4: Goto the parent component .html file
+				<child-component (objMessageEvent) ="message=$event"></child-component>      
+To implement Data binding
+	Step 1: Import the FormsModule class from '@angular/forms' module in app.module.ts file
+	Step 2: Must specify dependency to the existing module in the imports property of @NgModule() declarator
+				@NgModule({
+					declarations:[],		
+					imports:[
+					      BrowserModule,
+					      FormsModule
+					],
+					...		
+				})
+	Step 3: Use the ngModel directive as a property to <input> 
+			|-> <input type="text" [(ngModel)] = "<VariableName>" />
+
+To Add the component dynamically
+	Step 1: Include ViewChild type,AfterContentInit interface and ComponentFactoryResolver class from '@angular/core' module
+	Step 2: On the app.module.ts file we need to mention which components we are going to add dynamically using "entryComponent" property of @NgModule() declarator
+	Step 3: Use the ViewChild type as a declarator inside the component.ts on which we need to add another component dynamically
+			@ViewChild('<TemporaryVariable>',{read:ViewContainerRef})  <VariableName>
+	Step 4: Create the temporary/reference variable on the .html file to show in which portion of the page the add dynamic component as to be displayed
+			<div #<TemporaryVariable> </div>
+	Step 6: Have a constructor inside the component.ts class to specify that it is dependent on ComponentFactoryResolver class
+			constructor(private <ReferenceVaraible>: ContentFactoryResolver){
+			}
+	Stpe 5: Inherit the AfterContentInit interface to a component class and provide the implementation for ngAfterContentInit()
+			        |->  ngAfterContentInit(){
+                                                                                     const sRef = this. <ContentFactoryResolver Reference>.resolveComponentFactory(<Component Class Name>)    
+				     this.<ViewChild VariableName>.createComponent(sRef);					|-> import the component path inside the component.ts file
+			               }
+To create Modules
+	- Used to place each and every information [ Validation , Import/Export the data ] in a seperate module
+	- To achieve better modularity [ Reusability, Debugging and Userfriendliness ]
+	- Can be created either using IDE or Angular CLI command
+					           |-> ng g module <Module Name>
+	- By default all the containers of the module are visible and accessible only within that module
+			    |-> Visible and accessible outside the current module we use "export" property of @NgModule() declarator
+
+HMR [Hot Module Replacement ]
+	- Changes made to the module on any containers will be reflected back to the page without refereshing it
+							|-> A build automation tool used by Angular CLI
+							              |-> WebPack 
+								        - Used to bundle all the files that are required to deploy the application 
+Directives
+	- One of the containers placed inside the module
+	- Can act either as an Tag or an attribute to the tags.
+	Type
+	       a. Component
+		- All the component within the module will act as a directive
+		- We mapped the components on the view as a Tag
+	       b. Structural
+		- Used to modify the structure of DOM 
+			      |-> At the run time
+		- Predefined
+		- Will be used as an attribute to any existing open HTML tag elements
+				    |-> Has to be preceeded by an "*" 
+				           Namely : *ngIf , *ngFor , *ngSwitchCase and *ngSwitchDefault
+	       c. Attribute
+		- Customized / Userdefined Directives
+				|-> Can be created either using an IDE or Angular CLI command
+		- Can be represented as an attribute to any existing open HTML tag elements
+Bootstrap
+	- CSS Library used to provide our application a modern look and feel	
+	- 2 Different ways to link the Bootstrap library to our application
+	             |-> a. CDN [Content Delivery Network]  Site provided by Google  	: No need to download the bootstrap libraries explicitly to our application
+			|-> Inside the <head> tag element in index.html file
+				             |-> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+					 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+				                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	                   b. Install the npm package
+			        |-> b.1 npm install popper.js  -- save
+			              b.2 npm install jquery.js  -- save
+			              b.3 npm install bootstrap -- save	
+			              b.4 Need to physcial map these files inside angular-cli.json / angular.json
+						                       Angular 2/4/5 <- |	 Angular 6 <-|
+					- Search for styles and scripts property
+						      b.4.1 on the styles property append the physical location where the Bootstrap CSS library is installed
+							"styles": [
+								   "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+							                       "src/styles.css"
+              							                  ]
+						     b.4.2 on the scripts propery append the physical location where jquery and bootstrap .js files 
+							"scripts": [  
+								     "./node_modules/jquery/dist/jquery.min.js",
+								     "./node_modules/popper.js/dist/umd/popper.min.js",
+								     "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+  								]
+Materials
+	 - Library of high-quality UI components built with Angular and TypeScript
+	 - Interantainalized [ Across Various languages ], Clean and simple API , Well -tested [Unit and Integrated], Customizable and Fast
+	 - Online help
+		|->https://material.angular.io
+				|-> Components
+					|-> Form Controls
+					       Navigations
+					       Layout
+					       Buttons, inidciators and Icons
+					       Popups , Modals and Datatable
+	BootStrap Vs Materials
+		BootStrap
+		        - Avilable to all the components
+		        - Built using HTML , CSS and JavaScript
+		        - We have to use 3rd -party components
+		Materials
+		          - Not avilable to all the components [ Angular 4 ]			
+		          - Built by Google
+		          - Common API
+		          - Easy to use
+	Install Angular Material
+		1.  Create a new project
+			ng new <project name>
+		2. Go inside the project and install node packages
+					            |-> Component Development Kit
+			npm install --save @angular/cdk  @anuglar/materials @angular/animations hammerjs
+											|-> To add gestures to the components
+		3. Include Themes
+			NodeModule -> @Angular -> material -> prebuilt-themes
+								|-> Various css files
+		4. Open app.component.css to import the themes
+			@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+		5. Open app.module.ts
+			- Import modules
+				a. Include BrowerAnimation module to include animations in the browser
+					import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+				b. No need of animations
+					import {NoopAnimationsModule} from '@anguarl/platform-browser/animations';
+				c. To imports custom components
+					import {MdCheckboxModule} from '@anuglar/material';
+
+			-  Include these modules inside @NgModule declarators
+				imports:[
+				     BrowserModule,
+				     BrowserAnimationsModule,
+				     MdCheckboxModule
+				]
+		  6. Open app.component.html
+			- Add a checkbox
+				|-> <md-checkbox> Subscribe to newsletter  </md-checkbox>
+
+Services
+	- Used to implement a common functionality across various containers within the module or across the modules
+				|-> Equivalent to Userdefined 
+						|-> Header files in "C"/"C+" or
+						      Packages in "JAVA" or
+						      Namespaces in ".Net Framework"
+	- Avoid Redundancy of codes
+	Types
+	     a. HTTP Service
+		- Used to either import/export the data from external resources
+							|-> Application Server/  Database Server / File Server / Web Server
+		Step 1:  Include HttpClientModule from "@angular/common/http"
+				  |-> Inside app.module.ts file
+					             |-> Specify that our AppModule is dependent on HttpClientModule
+									       |-> 1.1 using import {HttpClientModule} from '@angular/common/http';
+									             1.2 import:[
+										      ...,
+										     HttpClientModule,
+										     ....
+                                               								]
+		Step 2: Include HttpClient class from "@angular/common/http"
+				|-> Dependent to my component class
+					|-> constructor(private refHttpClient:HttpClient){
+					       }
+	
+		Step 3: We can use either get() or post() predefined methods in HttpClient class
+                                 ed to export the data <-|	          |-> Used to import the data
+										
+	     b. Custom/User defined 		
+		       - In Angular 2/4/5 the Module references Custom services but from Angular 6 Services will reference the module
+			               |-> Step 1 : Create a user defined service using an Angular CLI command ng g service <Service Name>
+				 Step 2: Include the created custom serivce class name inside app.module.ts
+					 |-> 2.1 import {<CustomService ClassName> } from '<Absolute/Relative> Path of CustomService.ts';
+					       2.2 providers:[<CustomService ClassName>]	
+				Stpe 3: Include the created custom serive class name in which ever container of the module we want to inject it
+					|->  3.1 import {<CustomService ClassName> } from '<Absolute/Relative> Path of CustomService.ts';
+				                           3.2 Indicate your container class is dependent on created custom service 
+									  |-> 3.2.1 constructor(private <VariableReference>:<Custom Service Class Name>){
+									                  }
+					      3.3 Inject the created custom service during initializing phase of  the container
+										|-> Inherit the OnInit interface to the container class
+											              |-> "@angular/core" package
+										       		 Implement ngOnInit() method inside the container class
+					
