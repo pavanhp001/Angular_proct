@@ -15,7 +15,6 @@ export const identityRevealedValidator: ValidatorFn = (control: FormGroup): Vali
 })
 export class IdentityRevealedValidatorDirective implements Validator {
   validate(control: AbstractControl): ValidationErrors {
-    console.log("control value: "+control.value);
     return identityRevealedValidator(control);
   }
 }
