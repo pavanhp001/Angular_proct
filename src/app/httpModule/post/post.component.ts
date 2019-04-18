@@ -14,6 +14,7 @@ const API_URL = 'https://jsonplaceholder.typicode.com/posts';
 export class PostComponent implements OnInit {
 
   posts: any[];
+  post = {title: ''};
 
   constructor(private http: Http) {
     console.log('API_URL' + API_URL);
@@ -21,26 +22,38 @@ export class PostComponent implements OnInit {
 
   createPost(input: HTMLInputElement) {
     console.log(input.value);
-    const post = {title: input.value};
+    this.post = {title: input.value};
     input.value  = '';
-    this.http.post(API_URL, JSON.stringify(post)).subscribe(response => {
+    this.http.post(API_URL, JSON.stringify(this.post)).subscribe(response => {
       console.log(response);
-      post['id'] = response.json().id;
-      this.posts.splice(0, 0, post);
+      this.post['id'] = response.json().id;
+      this.posts.splice(0, 0, this.post);
     });
   }
 
   deletePost(input) {
     console.log(input);
     this.http.delete(API_URL + '/' + input.id).subscribe(response => {
+      let index = this.posts.indexOf(input);
+      console.log(this.posts.indexOf(input));
+      this.posts.splice(index, 1);
       console.log(response.json());
     });
   }
   updatePost(input) {
     console.log(input);
-    this.http.patch(API_URL + '/' + input.id, JSON.stringify({isRead: true}))
+    input.title = "Updated";
+   // this.http.patch(API_URL + '/' + input.id, JSON.stringify({title: "updated"}))
+    this.http.put(API_URL + '/' + input.id, JSON.stringify(input))
     .subscribe(response => {
-      console.log(response.json());
+      let index = this.posts.indexOf(input);
+      let uValue = response.json().title;
+      input.title = response.json().title;
+      console.log( response.json());
+      console.log( input.title);
+      console.log( JSON.stringify(response.json().title));
+    }, error => {
+      alert(error);
     });
  }
 
