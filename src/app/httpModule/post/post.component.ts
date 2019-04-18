@@ -16,6 +16,8 @@ export class PostComponent implements OnInit {
   posts: any[];
   post = {title: ''};
 
+  
+
   constructor(private http: Http) {
     console.log('API_URL' + API_URL);
   }
