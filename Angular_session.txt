@@ -1,7 +1,7 @@
 Ground Rules :
 	1. Attendance
 		- Appreciated if you could login to the session using Wipro MailId
-		- Minimum 70% of attendance in training
+		- Minimum 70% of attendance in training 
 		- Complete and Submit the assignments in TopGear on or before 24th April 2019
 		- Must complete the assessment [ 20 Multiple choice questions ] https://newitms.wipro.com on or before 24th April'19.
 	2. E-learning
@@ -189,7 +189,7 @@ Next Generation JavaScript, Uses ECMA 6/7 <-  |		|-> Animations are part of @ang
 						|-> Readable / Manageable / Userfriendly
 		d. Angular 5
 			a)  Build Optimizer			:  This is a tool which was included in the CLI to help the developers in creating a smaller 
-			     bundle for the application.  Apart from decreasing the users’ bundle size, the feature also helps in increasing the boot speed of 
+			     bundle for the application.  Apart from decreasing the usersï¿½ bundle size, the feature also helps in increasing the boot speed of 
 			     the application for the users.
 			b)  Compiler Improvements		: To enhance faster rebuilds for production and AOT (Ahead of Time) builds, Angular 5 supports
 			     incremental compilation.
