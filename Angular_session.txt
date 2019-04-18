@@ -1,29 +1,3 @@
-Ground Rules :
-	1. Attendance
-		- Appreciated if you could login to the session using Wipro MailId
-		- Minimum 70% of attendance in training 
-		- Complete and Submit the assignments in TopGear on or before 24th April 2019
-		- Must complete the assessment [ 20 Multiple choice questions ] https://newitms.wipro.com on or before 24th April'19.
-	2. E-learning
-		- https://newitms.wipro.com 
-			       |-> Learning Initative -> Technology -> Java -> Angular (Ver 4,5,6) [ Cur - 2937 ]
-		- Currated Contents https://newitms.wipro.com
-					      |-> Learning Initative -> Future Skills
-		- WebEx Recording
-	3. Assignments
-		- https://topgear-app.wipro.com
-				|-> Communities -> UI Development -> Angular
-								  |
-								  V
-							      Training Projects
-				                    Angular 4 Assignments L2 <-|
-		- Submission : https://topgear-training-gitlab.wipro.com/ (or) 
-			      https://topgear-app.wipro.com/sites/default/files/steps_to_execute_topgear_training_case_study_projects_v1_2_3.pdf
-	4. Training Schedule
-		- 15th to 19th April 2019 excluding 18th April 2019.
-		- 2.30 PM to 5.30 PM
-		- Logical break either for 20 or 25 minutes between 3.30 PM / 3.45 PM
-		- Interactive session [ Acknowledge me and Concerns/Challenges during the training ]
 Agenda :-
 	a. Overview of Web Applications, JavaScript  and JavaScript Framework
 	b. Introduction to Angular
