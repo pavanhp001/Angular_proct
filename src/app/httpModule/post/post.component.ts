@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
-import { httpFactory } from '@angular/http/src/http_module';
-// import { environment } from 'environments/environment';
 
-// const API_URL = environment.URL;
-const API_URL = 'https://jsonplaceholder.typicode.com/posts';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-post',
@@ -15,54 +11,69 @@ export class PostComponent implements OnInit {
 
   posts: any[];
   post = {title: ''};
+  constructor(private service: PostService) {}
 
-  
-
-  constructor(private http: Http) {
-    console.log('API_URL' + API_URL);
+  ngOnInit() {
+    this.service.getPosts()
+    .subscribe(response => {
+      this.posts = response.json();
+    },
+    error => {
+      alert('An unexpected error accured.');
+      console.log(error);
+    });
   }
 
   createPost(input: HTMLInputElement) {
     console.log(input.value);
     this.post = {title: input.value};
     input.value  = '';
-    this.http.post(API_URL, JSON.stringify(this.post)).subscribe(response => {
+    this.service.createPost(input.value).subscribe(response => {
       console.log(response);
-      this.post['id'] = response.json().id;
+      this.post.id = response.json().id;
       this.posts.splice(0, 0, this.post);
+    },
+    error => {
+      alert('An unexpected error accured.');
+      console.log(error);
     });
   }
 
   deletePost(input) {
     console.log(input);
-    this.http.delete(API_URL + '/' + input.id).subscribe(response => {
-      let index = this.posts.indexOf(input);
+    this.service.deletePost(input)
+    .subscribe(response => {
+      const index = this.posts.indexOf(input);
       console.log(this.posts.indexOf(input));
       this.posts.splice(index, 1);
       console.log(response.json());
+    },
+    (error: Response) => {
+      if (error.status === 404) {
+        alert('this post is already deleted');
+      } else{
+        alert('An unexpected error accured.');
+        console.log(error);
+      }
     });
   }
   updatePost(input) {
     console.log(input);
-    input.title = "Updated";
+    input.title = 'Updated';
    // this.http.patch(API_URL + '/' + input.id, JSON.stringify({title: "updated"}))
-    this.http.put(API_URL + '/' + input.id, JSON.stringify(input))
+    this.service.updatePost(input)
     .subscribe(response => {
-      let index = this.posts.indexOf(input);
-      let uValue = response.json().title;
+      const index = this.posts.indexOf(input);
+      const uValue = response.json().title;
       input.title = response.json().title;
       console.log( response.json());
       console.log( input.title);
       console.log( JSON.stringify(response.json().title));
-    }, error => {
-      alert(error);
+    },
+    error => {
+      alert('An unexpected error accured.');
+      console.log(error);
     });
  }
-
-  ngOnInit() {
-    this.http.get(API_URL).subscribe(response => {
-      this.posts = response.json();
-    });
-  }
 
 }

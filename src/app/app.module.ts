@@ -4,6 +4,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { FooterPageComponent } from './footer/footer-page/footer-page.component'
 import { AppRoutingModule } from './app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PostComponent } from './httpModule/post/post.component';
+import { PostService } from './httpModule/post.service';
 
 
 @NgModule({
@@ -55,10 +57,12 @@ import { PostComponent } from './httpModule/post/post.component';
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
+
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
