@@ -1,0 +1,22 @@
+https://www.djamware.com/post/5bbf534580aca7466989441c/angular-6-firebase-tutorial-firestore-crud-web-application
+
+
+pavan.scala24@gmail.com
+
+Project ID 
+djamware-ac2f3
+Locations 
+United States(Analytics)
+nam5 (us-central)(Cloud Firestore)
+
+Data base
+/boards/bxToMAGM8nQMs2BbxGKe
+
+
+hash_config {
+  algorithm: SCRYPT,
+  base64_signer_key: ls0d8QU9fKgYPQalIddSqfdCb085gur5TTaVdfEUUsSZZs+Sw4WP5EUnlE80I3oTEkTKGkEq+c1gCKkHt3gIhg==,
+  base64_salt_separator: Bw==,
+  rounds: 8,
+  mem_cost: 14,
+}
