@@ -21,6 +21,6 @@ export class PostService {
   }
 
   deletePost(input) {
-    return this.http.delete(API_URL + '/' + 300);
+    return this.http.delete(API_URL + '/' + input);
   }
 }

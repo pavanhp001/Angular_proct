@@ -30,7 +30,7 @@ export class PostComponent implements OnInit {
     input.value  = '';
     this.service.createPost(input.value).subscribe(response => {
       console.log(response);
-      this.post.id = response.json().id;
+      this.post['id']= response.json().id;
       this.posts.splice(0, 0, this.post);
     },
     error => {
@@ -41,7 +41,7 @@ export class PostComponent implements OnInit {
 
   deletePost(input) {
     console.log(input);
-    this.service.deletePost(input)
+    this.service.deletePost(300)
     .subscribe(response => {
       const index = this.posts.indexOf(input);
       console.log(this.posts.indexOf(input));
@@ -51,10 +51,7 @@ export class PostComponent implements OnInit {
     (error: Response) => {
       if (error.status === 404) {
         alert('this post is already deleted');
-      } else{
-        alert('An unexpected error accured.');
-        console.log(error);
-      }
+      } else throw error
     });
   }
   updatePost(input) {
@@ -69,11 +66,12 @@ export class PostComponent implements OnInit {
       console.log( response.json());
       console.log( input.title);
       console.log( JSON.stringify(response.json().title));
-    },
-    error => {
-      alert('An unexpected error accured.');
-      console.log(error);
-    });
+     }
+    // error => {
+    //   alert('An unexpected error accured.');
+    //   console.log(error);
+    // }  We Can remove the code block becouse of Global error handler.
+    );
  }
 
 }
