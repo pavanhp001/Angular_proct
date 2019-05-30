@@ -28,6 +28,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PostComponent } from './httpModule/post/post.component';
 import { PostService } from './httpModule/post.service';
 import { AppErrorHandler } from './shared/app-error-handler';
+import { PaginationComponent } from './pagination/pagination.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -48,7 +50,8 @@ import { AppErrorHandler } from './shared/app-error-handler';
     NavbarHeaderComponent,
     FooterPageComponent,
     PageNotFoundComponent,
-    PostComponent
+    PostComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { AppErrorHandler } from './shared/app-error-handler';
     ModalModule.forRoot(),
     AppRoutingModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
 
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],

@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactFormComponent } from './template/contact-form/contact-form.component';
 import { FormReactiveComponent } from './reactive/form-reactive/form-reactive.component';
 import { PostComponent } from './httpModule/post/post.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,9 @@ const routes: Routes = [
   },{
     path: 'httpModule',
     component: PostComponent
+  },{
+    path: 'Pagination',
+    component: PaginationComponent
   },{
     path: '**',
     component: PageNotFoundComponent
