@@ -4,14 +4,13 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpModule } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
 import { DemoComponent } from './DemoComp/demo/demo.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SummeryPipe } from './customPipes/summery.pipe';
-import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './home/parent.component';
 import { ChildComponent } from './home/child.component';
 import { FormDemoComponent } from './form-demo/form-demo.component';
@@ -30,6 +29,10 @@ import { PostService } from './httpModule/post.service';
 import { AppErrorHandler } from './shared/app-error-handler';
 import { PaginationComponent } from './pagination/pagination.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { LoginComponent } from './auth/login';
+import { AdminComponent } from './auth/admin/admin.component';
+import { ErrorInterceptor, JwtInterceptor, fakeBackendProvider } from './auth/_helpers';
+import { HomeComponent } from './auth/home';
 
 
 @NgModule({
@@ -51,7 +54,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
     FooterPageComponent,
     PageNotFoundComponent,
     PostComponent,
-    PaginationComponent
+    PaginationComponent,
+    HomeComponent,
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +73,12 @@ import {NgxPaginationModule} from 'ngx-pagination';
 
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
-  providers: [PostService,
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider,
+    PostService,
   {provide: ErrorHandler, useClass: AppErrorHandler}],
   bootstrap: [AppComponent]
 })
